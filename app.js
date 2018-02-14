@@ -1,8 +1,8 @@
 const express = require('express');
 app = express(),
 request = require('request'),
-apikey = require('./secret').apikey || process.env.APIKEY,
-apiID = require('./secret').apiID || process.env.APIID,
+apikey = process.env.APIKEY || require('./secret').apikey,
+apiID = process.env.APIID || require('./secret').apiID,
 port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
