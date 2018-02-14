@@ -1,7 +1,7 @@
 const express = require('express');
 app = express(),
 request = require('request'),
-{apikey} = require('./secret'),
+apikey = require('./secret').apikey || process.env.APIKEY,
 port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
