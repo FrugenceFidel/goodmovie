@@ -1,0 +1,11 @@
+<% include partials/header %>
+
+  <% results.forEach(movie => { %>
+    <div>
+      <h2><%= movie.Title %></h2>
+      <img src="<%= movie.Poster %>">
+      <p>The <%= movie.Type %> released at year <%= movie.Year %></p>
+    </div>
+  <% }); %>
+
+<% include partials/header %>
