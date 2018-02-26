@@ -1,16 +1,20 @@
 <% include partials/header %>
 
-  <% results.forEach(movie => { %>
-    <div>
-      <h2><%= movie.Title %></h2>
-      <!-- <img src="<%= movie.Poster %>"> -->
-      <% if(movie.Poster !== 'N/A') { %>
-        <img src="<%= movie.Poster %>" alt="Movie image">
-      <% } else { %>
-        <img src="https://www.socabelec.co.ke/wp-content/uploads/no-photo-7.jpg" alt="Movie image">
-      <% }; %>
-      <p>The <%= movie.Type %> released at year <%= movie.Year %></p>
-    </div>
-  <% }); %>
+  <% if(Response === 'True') { %>
+    <% results.forEach(movie => { %>
+      <div>
+        <h2><%= movie.Title %></h2>
+        <% if(movie.Poster !== 'N/A') { %>
+          <img src="<%= movie.Poster %>" alt="Movie image">
+        <% } else { %>
+          <img src="https://www.socabelec.co.ke/wp-content/uploads/no-photo-7.jpg" alt="Movie image">
+        <% }; %>
+        <p>The <%= movie.Type %> released at year <%= movie.Year %></p>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <h2><%= Error %></h2>
+    <img src="https://www.computerhope.com/jargon/e/error.gif" alt="Movie not found">
+  <% }; %>
 
 <% include partials/footer %>
