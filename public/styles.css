@@ -13,10 +13,10 @@ body {
 }
 
 a {
-  opacity: 0.7;
+  opacity: 0.8;
   color: #3e3e3e;
   text-decoration: none;
-  transition: opacity .7s ease-out;
+  transition: opacity .5s ease-out;
 }
 
 a:hover {
@@ -65,5 +65,17 @@ header form button {
 
   header form {
     margin-top: 0;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 1.25rem 0.625rem;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  footer {
+    padding: 2.5rem 0.625rem;
   }
 }
