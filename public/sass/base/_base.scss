@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 55%;
+  
+  @include respond(tab-port) {
+    font-size: 58%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 60%;
+  }
+
+  @include respond(large) {
+    font-size: 62.5%; // 10px = 1rem = (10/16) = 62.5%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background: url('/img/bg-3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: $main-width;
+  margin: 0 auto;
+  padding: 0 2%;
+
+  @include respond(large) {
+    padding: 0;
+  }
+}

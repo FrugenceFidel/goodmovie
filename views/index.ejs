@@ -1,22 +1,32 @@
 <% include partials/header %>
 
   <main>
-    <% if(Response === 'True') { %>
-      <% results.forEach(movie => { %>
-        <div class="card">
-          <h2 class="card-title"><%= movie.Title %></h2>
-          <% if(movie.Poster !== 'N/A') { %>
-            <img class="card-img" src="<%= movie.Poster %>" alt="Movie image">
-          <% } else { %>
-            <img src="https://www.socabelec.co.ke/wp-content/uploads/no-photo-7.jpg" alt="Movie image">
-          <% }; %>
-          <p class="card-text">The <%= movie.Type %> released at year <%= movie.Year %></p>
-        </div>
-      <% }); %>
-    <% } else { %>
-      <h2><%= Error %></h2>
-      <img src="https://www.computerhope.com/jargon/e/error.gif" alt="Movie not found">
-    <% }; %>
+    <div class="container">
+      <% if(Response === 'True') { %>
+        <% results.forEach(movie => { %>
+          <div class="card">
+            <h2 class="card-title">
+              <%= movie.Title %>
+            </h2>
+            <% if(movie.Poster !== 'N/A') { %>
+              <img class="card-img" src="<%= movie.Poster %>" alt="Movie image">
+              <% } else { %>
+                <img src="img/no.jpg" alt="No image preview">
+                <% }; %>
+                  <p class="card-text">The
+                    <%= movie.Type %> released at year
+                      <%= movie.Year %>
+                  </p>
+          </div>
+          <% }); %>
+            <% } else { %>
+              <h2>
+                <%= Error %>
+              </h2>
+              <!-- Create section for display error message -->
+              <img src="https://www.computerhope.com/jargon/e/error.gif" alt="Movie not found">
+              <% }; %>
+    </div>
   </main>
 
-<% include partials/footer %>
+  <% include partials/footer %>

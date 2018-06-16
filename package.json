@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass public/sass/main.scss public/styles/styles.css -w",
     "start": "node app.js"
   },
   "author": "frugence fidel",
@@ -13,5 +13,8 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.0"
   }
 }

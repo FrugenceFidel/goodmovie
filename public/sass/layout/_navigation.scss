@@ -1,0 +1,61 @@
+.navigation {
+  background: $color-primary;
+  
+  padding: 2rem 0;
+  
+  &__nav {
+    max-width: $main-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include respond(tab-port) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 2%;
+    }
+
+    @include respond(large) {
+      padding: 0;
+    }
+  }
+
+  &__nav-brand:link,
+  &__nav-brand:visited {
+    font-size: 2rem;
+    color: $color-red;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: .8;
+    margin-bottom: 1rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__nav-brand:hover,
+  &__nav-brand:active {
+    opacity: 1;
+  }
+
+  input {
+    font-size: 1.5rem;
+    padding: .8rem;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 1px;
+  }
+
+  [type='submit'] {
+    cursor: pointer;
+    display: inline-block;
+    background: $color-red;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 55%; }
+  @media only screen and (min-width: 37.5em) {
+    html {
+      font-size: 58%; } }
+  @media only screen and (min-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  box-sizing: border-box;
+  background: url("/img/bg-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 2%; }
+  @media only screen and (min-width: 75em) {
+    .container {
+      padding: 0; } }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; }
+
+.navigation {
+  background: #3E464C;
+  padding: 2rem 0; }
+  .navigation__nav {
+    max-width: 114rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media only screen and (min-width: 37.5em) {
+      .navigation__nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2%; } }
+    @media only screen and (min-width: 75em) {
+      .navigation__nav {
+        padding: 0; } }
+  .navigation__nav-brand:link, .navigation__nav-brand:visited {
+    font-size: 2rem;
+    color: #f06292;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: .8;
+    margin-bottom: 1rem; }
+    @media only screen and (min-width: 37.5em) {
+      .navigation__nav-brand:link, .navigation__nav-brand:visited {
+        margin-bottom: 0; } }
+  .navigation__nav-brand:hover, .navigation__nav-brand:active {
+    opacity: 1; }
+  .navigation input {
+    font-size: 1.5rem;
+    padding: .8rem;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 1px; }
+  .navigation [type='submit'] {
+    cursor: pointer;
+    display: inline-block;
+    background: #f06292;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300; }
