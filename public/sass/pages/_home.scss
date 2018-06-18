@@ -1,0 +1,35 @@
+.section-movies {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+
+  @include respond(tab-land) {
+    justify-content: space-around;
+  }
+
+  @include respond(large) {
+    justify-content: space-between;
+  }
+
+  &__movie {
+    flex-basis: calc((#{$main-width} - 10rem) / 2);
+    margin-bottom: $horizontal-gutter-sm;
+
+    @include respond(tab-port) {
+    margin-bottom: $horizontal-gutter;
+    }
+
+    @include respond(tab-land) {
+      flex-basis: calc((#{$main-width} - 25rem) / 2);
+    }
+
+    @include respond(large) {
+      flex-basis: calc((#{$main-width} - 10rem) / 3);
+    }
+  }
+}

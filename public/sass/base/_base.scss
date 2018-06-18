@@ -31,6 +31,10 @@ body {
   background-attachment: fixed;
 }
 
+main {
+  min-height: 90vh;
+}
+
 .container {
   max-width: $main-width;
   margin: 0 auto;

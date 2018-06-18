@@ -25,6 +25,9 @@ body {
   background-position: center;
   background-attachment: fixed; }
 
+main {
+  min-height: 90vh; }
+
 .container {
   max-width: 114rem;
   margin: 0 auto;
@@ -36,6 +39,36 @@ body {
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400; }
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 400; }
+
+p {
+  font-size: 1.5rem;
+  font-weight: 300; }
+
+.feature-box {
+  height: 40rem;
+  position: relative;
+  border-radius: .5rem;
+  box-shadow: 0 0.5rem 2rem #3E464C;
+  overflow: hidden; }
+  .feature-box__img {
+    width: 100%;
+    height: 100%; }
+  .feature-box__content {
+    background: rgba(62, 70, 76, 0.8);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem; }
+  .feature-box__title {
+    color: #f06292; }
 
 .navigation {
   background: #3E464C;
@@ -81,3 +114,30 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-weight: 300; }
+
+.section-movies {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media only screen and (min-width: 37.5em) {
+    .section-movies {
+      padding: 3rem 0; } }
+  @media only screen and (min-width: 56.25em) {
+    .section-movies {
+      justify-content: space-around; } }
+  @media only screen and (min-width: 75em) {
+    .section-movies {
+      justify-content: space-between; } }
+  .section-movies__movie {
+    flex-basis: calc((114rem - 10rem) / 2);
+    margin-bottom: 2rem; }
+    @media only screen and (min-width: 37.5em) {
+      .section-movies__movie {
+        margin-bottom: 4rem; } }
+    @media only screen and (min-width: 56.25em) {
+      .section-movies__movie {
+        flex-basis: calc((114rem - 25rem) / 2); } }
+    @media only screen and (min-width: 75em) {
+      .section-movies__movie {
+        flex-basis: calc((114rem - 10rem) / 3); } }

@@ -3,29 +3,39 @@
   <main>
     <div class="container">
       <% if(Response === 'True') { %>
-        <% results.forEach(movie => { %>
-          <div class="card">
-            <h2 class="card-title">
-              <%= movie.Title %>
+        <section class="section-movies">
+          <% results.forEach(movie => { %>
+            <div class="section-movies__movie">
+              <div class="feature-box">
+                <% if(movie.Poster !== 'N/A') { %>
+                  <img class="feature-box__img" src="<%= movie.Poster %>" alt="Movie image">
+                  <% } else { %>
+                    <img src="img/no.jpg" class="feature-box__img" alt="No image preview">
+                    <% }; %>
+
+                      <div class="feature-box__content">
+                        <h2 class="feature-box__title">
+                          <%= movie.Title %>
+                        </h2>
+
+                        <p class="feature-box__text">The
+                          <%= movie.Type %> released at year
+                            <%= movie.Year %>
+                        </p>
+                      </div>
+              </div>
+            </div>
+            <% }); %>
+        </section>
+        <% } else { %>
+          <section class="section-error">
+            <h2>
+              <%= Error %>
             </h2>
-            <% if(movie.Poster !== 'N/A') { %>
-              <img class="card-img" src="<%= movie.Poster %>" alt="Movie image">
-              <% } else { %>
-                <img src="img/no.jpg" alt="No image preview">
-                <% }; %>
-                  <p class="card-text">The
-                    <%= movie.Type %> released at year
-                      <%= movie.Year %>
-                  </p>
-          </div>
-          <% }); %>
-            <% } else { %>
-              <h2>
-                <%= Error %>
-              </h2>
-              <!-- Create section for display error message -->
-              <img src="https://www.computerhope.com/jargon/e/error.gif" alt="Movie not found">
-              <% }; %>
+            <!-- Create section for display error message -->
+            <img src="https://www.computerhope.com/jargon/e/error.gif" alt="Movie not found">
+          </section>
+          <% }; %>
     </div>
   </main>
 
