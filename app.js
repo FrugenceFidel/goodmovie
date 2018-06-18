@@ -1,10 +1,10 @@
 const express = require('express');
-const secret = require('./secret');
 const request = require('request');
 
 const app = express();
-const apikey = process.env.APIKEY || secret.apikey;
-const apiID = process.env.APIID || secret.apiID;
+const apikey = process.env.APIKEY || require('./secret').apikey;
+const apiID = process.env.APIID || require('./secret').apiID;
+
 const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
