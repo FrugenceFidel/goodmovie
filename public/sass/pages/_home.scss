@@ -33,3 +33,16 @@
     }
   }
 }
+
+.section-error {
+  text-align: center;
+  margin-top: 40px;
+
+  &__msg {
+    display: inline-block;
+    background: $color-red;
+    color: #fff;
+    padding: 2rem;
+    border: .4rem solid $color-primary;
+  }
+}

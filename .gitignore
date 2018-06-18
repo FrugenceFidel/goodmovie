@@ -1,2 +1,5 @@
 node_modules/
+public/sass/
+public/style/*
+!public/style/style.css
 secret.js
