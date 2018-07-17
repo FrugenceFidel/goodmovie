@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  const search = req.query.movie || 24;
+  const search = req.query.movie || 'cyborg';
   request(`http://www.omdbapi.com/?apikey=${apiID}&s=${search}`, (err, response, body) => {
     if (!err && response.statusCode === 200) {
       const movies = JSON.parse(body);
