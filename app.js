@@ -16,15 +16,18 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   const search = req.query.movie || 'cyborg';
-  request(`http://www.omdbapi.com/?apikey=${apiID}&s=${search}`, (err, response, body) => {
-    if (!err && response.statusCode === 200) {
-      const movies = JSON.parse(body);
-      const { Search: results } = movies;
-      const { Response } = movies;
-      const { Error } = movies;
-      res.render('index', { results, Response, Error });
+  request(
+    `http://www.omdbapi.com/?apikey=${apiID}&s=${search}`,
+    (err, response, body) => {
+      if (!err && response.statusCode === 200) {
+        const movies = JSON.parse(body);
+        const { Search: results } = movies;
+        const { Response } = movies;
+        const { Error } = movies;
+        res.render('index', { results, Response, Error });
+      }
     }
-  });
+  );
 });
 
 app.listen(port, () => {

@@ -1,5 +1,7 @@
 node_modules/
 public/sass/
 public/style/*
+node_modules/
+.DS_Store
 !public/style/style.css
 secret.js
